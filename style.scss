@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700;800;900&family=Raleway:wght@100;200;300;700;900&display=swap");
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  @include flexbox();
+  height: 100vh;
+  background-color: #d3d3d3;
+  #start{
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #67badb;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 15px;
+    z-index: 20;
+  }
+  .obj {
+    background-color: #d3d3d3;
+    height: 100px;
+    width: 1000px;
+    position: absolute;
+    margin-top: 150px;
+  }
+  .text {
+    margin-top: 150px;
+    transition: 0.4s;
+    text-align: center;
+    font-weight: 500;
+  }
+  .dot {
+    height: 0px;
+    width: 0px;
+    background-color: #d3d3d3;
+    position: absolute;
+    margin-bottom: 320px;
+    border-radius: 200px;
+    transition: 0.4s;
+    z-index: 2;
+    .date {
+      position: absolute;
+      font-size: 80px;
+      font-weight: 200;
+      color: #d3d3d3;
+      font-family: "Raleway", sans-serif;
+      transition: 0.3s;
+      text-transform: uppercase;
+      top: 26px;
+      left: 42px;
+      opacity: 0%;
+    }
+  }
+  .day {
+    z-index: 1;
+    display: none;
+    transition: 0.4s;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 100px;
+    .month {
+      font-size: 22px;
+      font-weight: 400;
+      color: #d3d3d3;
+      font-family: "Poppins", sans-serif;
+      width: 200px;
+      line-height: 30px;
+    }
+    .year {
+      font-size: 30px;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: #d3d3d3;
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      width: 200px;
+      line-height: 40px;
+    }
+  }
+  .own {
+    position: absolute;
+    font-size: 120px;
+    font-weight: 600;
+    color: #d3d3d3;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 150px;
+    opacity: 0%;
+    transition: 0.3s;
+  }
+  .cont {
+    position: absolute;
+    height: 281px;
+    margin-top: 30px;
+    background-color: transparent;
+    width: 500px;
+    .box {
+      position: absolute;
+      height: 0px;
+      width: 2px;
+      background-color: #939393;
+      z-index: 5;
+      transition: 0.5s;
+      .video{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 0.4s;
+      }
+      .content{
+        margin-top: 200px;
+        margin-left: 10px;
+        overflow: hidden;
+        height: 80px;
+        width: 100px;
+        z-index: 10;
+        .from{
+          line-height: 20px;
+          margin-left: -100px;
+          transition: 0.3s;
+        }
+        .country{
+          font-size: 40px;
+          font-weight: 200;
+          margin-left: -100px;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  .dob {
+    position: absolute;
+    font-size: 60px;
+    font-weight: 100;
+    color: #d3d3d3;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: -150px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    z-index: -1;
+  }
+  .name {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 100;
+    color: #d3d3d3;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 400px;
+    text-align: center;
+    margin-top: 150px;
+    transition: 0.4s;
+  }
+  .img{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 100px;
+    opacity: 0%;
+    transition: 0.5s;
+    z-index: 10;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .credit{
+    line-height: 35px;
+    z-index: 5;
+    font-size: 30px;
+    opacity: 0%;
+    position: absolute;
+    color: #ffffff;
+    transition: 0.5s;
+    margin-left: 50px;
+  }
+  .section {
+    @include flexbox();
+    position: absolute;
+    opacity: 0%;
+    div {
+      height: 20px;
+      width: 20px;
+      background-color: #000000;
+      border-radius: 50px;
+      margin: 0px 10px;
+      transition: 0.8s;
+      z-index: 2;
+      &:nth-child(1) {
+        animation: jump1 0.8s infinite ease-in;
+      }
+      &:nth-child(2) {
+        animation: jump2 0.8s infinite ease-in;
+      }
+      &:nth-child(3) {
+        animation: jump3 0.8s infinite ease-in;
+      }
+      &:nth-child(4) {
+        animation: jump4 0.8s infinite ease-in;
+      }
+    }
+  }
+}
+
+@keyframes jump1 {
+  0% {
+    margin-bottom: 0px;
+  }
+  20% {
+    margin-bottom: 30px;
+  }
+  40% {
+    margin-bottom: 0px;
+  }
+  60% {
+    margin-bottom: 0px;
+  }
+  80% {
+    margin-bottom: 0px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
+
+@keyframes jump2 {
+  0% {
+    margin-bottom: 0px;
+  }
+  20% {
+    margin-bottom: 0px;
+  }
+  40% {
+    margin-bottom: 30px;
+  }
+  60% {
+    margin-bottom: 0px;
+  }
+  80% {
+    margin-bottom: 0px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
+
+@keyframes jump3 {
+  0% {
+    margin-bottom: 0px;
+  }
+  20% {
+    margin-bottom: 0px;
+  }
+  40% {
+    margin-bottom: 0px;
+  }
+  60% {
+    margin-bottom: 30px;
+  }
+  80% {
+    margin-bottom: 0px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
+
+@keyframes jump4 {
+  0% {
+    margin-bottom: 0px;
+  }
+  20% {
+    margin-bottom: 0px;
+  }
+  40% {
+    margin-bottom: 0px;
+  }
+  60% {
+    margin-bottom: 0px;
+  }
+  80% {
+    margin-bottom: 30px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
